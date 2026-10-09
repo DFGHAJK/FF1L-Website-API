@@ -1,0 +1,87 @@
+
+{
+  "season": "T1",
+  "calendar": [
+    {"round": 1, "circuit": "Bahrain", "type": "Sprint", "date": "2024-08-22"},
+    {"round": 2, "circuit": "Bahrain", "type": "Race", "date": "2024-08-22"},
+    {"round": 3, "circuit": "Canada", "date": "2024-08-23"},
+    {"round": 4, "circuit": "Italy", "date": "2024-08-24"},
+    {"round": 5, "circuit": "Marrakech", "date": "2024-08-27"},
+    {"round": 6, "circuit": "Canarias", "date": "2024-08-29"}
+  ],
+  "driver_standings": [
+    {"position": 1, "driver": "David", "points": 56},
+    {"position": 2, "driver": "Juanma", "points": 40},
+    {"position": 3, "driver": "Henry", "points": 32},
+    {"position": 4, "driver": "Enrique", "points": 16},
+    {"position": 5, "driver": "Marc", "points": 16},
+    {"position": 6, "driver": "DragonBall Adri", "points": 15},
+    {"position": 7, "driver": "Iker", "points": 7},
+    {"position": 8, "driver": "Hermes", "points": 6},
+    {"position": 9, "driver": "TitoBaisenss", "points": 1},
+    {"position": 10, "driver": "Matias", "points": 1},
+    {"position": 11, "driver": "Daniel", "points": 0},
+    {"position": 12, "driver": "Rafa", "points": 0}
+  ],
+  "constructor_standings": [
+    {"position": 1, "team": "Henrys F1 Team", "points": 72},
+    {"position": 2, "team": "La Guagua F1 Team", "points": 57},
+    {"position": 3, "team": "Brexit F1 Team", "points": 22},
+    {"position": 4, "team": "Chevrolet F1 Team", "points": 17},
+    {"position": 5, "team": "Gamostry F1 Team", "points": 16},
+    {"position": 6, "team": "PlayStation Nissan F1", "points": 6},
+    {"position": 7, "team": "Lotus Hrt F1", "points": 0}
+  ],
+  "race_results": [
+    {
+      "round": 1,
+      "circuit": "Bahrain",
+      "type": "Sprint",
+      "results": ["Juanma", "David", "Henry"]
+    },
+    {
+      "round": 2,
+      "circuit": "Bahrain",
+      "type": "Race",
+      "results": [
+        "David", "Juanma", "Enrique", "DragonBall Adri",
+        "Marc", "TitoBaisenss", "Iker"
+      ],
+      "dnf": ["Daniel", "Henry"]
+    },
+    {
+      "round": 3,
+      "circuit": "Canada",
+      "results": [
+        "David", "Juanma", "Marc", "Henry", "Enrique",
+        "Iker", "Hermes"
+      ]
+    },
+    {
+      "round": 4,
+      "circuit": "Italy",
+      "results": ["David", "Henry", "Juanma", "Marc", "Enrique"]
+    },
+    {
+      "round": 5,
+      "circuit": "Marrakech",
+      "results": [
+        "David", "Henry", "Enrique", "Juanma",
+        "Marc", "DragonBall Adri"
+      ]
+    },
+    {
+      "round": 6,
+      "circuit": "Canarias",
+      "results": ["DragonBall Adri", "David", "Henry", "Juanma", "Marc", "Matias"]
+    }
+  ],
+  "champions": {
+    "drivers": "David",
+    "constructors": "Henrys F1 Team"
+  },
+  "additional_data": {
+    "pole_positions": null,
+    "fastest_laps": null
+  }
+}
