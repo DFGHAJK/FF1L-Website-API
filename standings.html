@@ -1,0 +1,146 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FF1L | Clasificación</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="brand">FF1L<span>®</span></div>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="calendar.html">Calendario</a>
+    <a href="results.html">Resultados</a>
+    <a class="active" href="standings.html">Clasificación</a>
+    <a href="drivers.html">Pilotos</a>
+    <a href="teams.html">Equipos</a>
+    <a href="news.html">Noticias</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<main>
+  <div class="page-title">
+    <p class="eyebrow">CHAMPIONSHIP</p>
+    <h1>Clasificación</h1>
+    <p>Clasificaciones históricas de la FF1L</p>
+  </div>
+
+  <section>
+    <label for="season-select">Temporada:</label>
+    <select id="season-select">
+      <option value="t1">T1</option>
+      <option value="t2">T2</option>
+      <option value="t3">T3</option>
+    </select>
+    <p id="status" role="status">Cargando clasificación…</p>
+  </section>
+
+  <section>
+    <h2 class="subhead">Pilotos</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>#</th><th>PILOTO</th><th>PTS</th></tr>
+        </thead>
+        <tbody id="drivers-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="subhead">Equipos</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>#</th><th>EQUIPO</th><th>PTS</th></tr>
+        </thead>
+        <tbody id="teams-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="subhead">Campeones de la temporada</h2>
+    <p id="champions"></p>
+  </section>
+</main>
+
+<footer>FF1L · Fortnite Formula 1 League</footer>
+
+<script>
+const DATA_BASE =
+  "https://raw.githubusercontent.com/DFGHAJK/FF1L-Website-API/main/data/seasons/";
+
+const seasonSelect = document.getElementById("season-select");
+const statusText = document.getElementById("status");
+const driversBody = document.getElementById("drivers-body");
+const teamsBody = document.getElementById("teams-body");
+const championsText = document.getElementById("champions");
+
+function addCell(row, value) {
+  const cell = document.createElement("td");
+  cell.textContent = value ?? "—";
+  row.appendChild(cell);
+}
+
+function renderRows(target, items, nameField) {
+  target.replaceChildren();
+
+  for (const item of items ?? []) {
+    const row = document.createElement("tr");
+    addCell(row, item.position);
+    addCell(row, item[nameField]);
+    addCell(row, item.points);
+    target.appendChild(row);
+  }
+}
+
+async function loadSeason(season) {
+  statusText.textContent = "Cargando " + season.toUpperCase() + "…";
+  driversBody.replaceChildren();
+  teamsBody.replaceChildren();
+  championsText.textContent = "";
+
+  try {
+    const response = await fetch(DATA_BASE + season + ".json", {
+      cache: "no-cache"
+    });
+
+    if (!response.ok) {
+      throw new Error("No se pudieron descargar los datos.");
+    }
+
+    const data = await response.json();
+
+    if (!Array.isArray(data.driver_standings) ||
+        !Array.isArray(data.constructor_standings)) {
+      throw new Error("El archivo no contiene las clasificaciones esperadas.");
+    }
+
+    renderRows(driversBody, data.driver_standings, "driver");
+    renderRows(teamsBody, data.constructor_standings, "team");
+
+    championsText.textContent =
+      "Pilotos: " + (data.champions?.drivers ?? "Sin datos") +
+      " · Equipos: " + (data.champions?.constructors ?? "Sin datos");
+
+    statusText.textContent = "Datos de " + data.season + " cargados.";
+  } catch (error) {
+    statusText.textContent =
+      "No se pudieron cargar los datos. Comprueba la conexión e inténtalo de nuevo.";
+    console.error(error);
+  }
+}
+
+seasonSelect.addEventListener("change", () => {
+  loadSeason(seasonSelect.value);
+});
+
+loadSeason(seasonSelect.value);
+</script>
+</body>
+</html>
