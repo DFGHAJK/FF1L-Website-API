@@ -1,0 +1,72 @@
+
+{
+  "project": "FF1L",
+  "current_season": "T8",
+  "sections": [
+    {
+      "id": "dashboard",
+      "name": "Dashboard",
+      "icon": "📊"
+    },
+    {
+      "id": "drivers",
+      "name": "Pilotos",
+      "icon": "👤"
+    },
+    {
+      "id": "teams",
+      "name": "Equipos",
+      "icon": "🏎️"
+    },
+    {
+      "id": "races",
+      "name": "Carreras",
+      "icon": "🏁"
+    },
+    {
+      "id": "results",
+      "name": "Resultados",
+      "icon": "📈"
+    },
+    {
+      "id": "championships",
+      "name": "Campeonatos",
+      "icon": "🏆"
+    },
+    {
+      "id": "penalties",
+      "name": "Sanciones",
+      "icon": "📜"
+    },
+    {
+      "id": "history",
+      "name": "Historia T1–T8",
+      "icon": "📚"
+    },
+    {
+      "id": "records",
+      "name": "Récords",
+      "icon": "🥇"
+    },
+    {
+      "id": "canva",
+      "name": "Contenido para Canva",
+      "icon": "🎨"
+    },
+    {
+      "id": "analysis",
+      "name": "IA / análisis",
+      "icon": "🤖"
+    }
+  ],
+  "data_status": {
+    "T1": "documented",
+    "T2": "documented",
+    "T3": "documented",
+    "T4": "pending",
+    "T5": "pending",
+    "T6": "pending",
+    "T7": "pending",
+    "T8": "pending"
+  }
+}
