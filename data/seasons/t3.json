@@ -1,0 +1,148 @@
+
+{
+  "season": "T3",
+  "calendar": [
+    {"round": 1, "circuit": "Qatar"},
+    {"round": 2, "circuit": "Navarra"},
+    {"round": 3, "circuit": "Lagos"},
+    {"round": 4, "circuit": "Italy"},
+    {"round": 5, "circuit": "Jerez"},
+    {"round": 6, "circuit": "Mexico"},
+    {"round": 7, "circuit": "USA"},
+    {"round": 8, "circuit": "Franciacorta"},
+    {"round": 9, "circuit": "Canada"},
+    {"round": 10, "circuit": "USA"},
+    {"round": 11, "circuit": "Silverstone"},
+    {"round": 12, "circuit": "Holanda"},
+    {"round": 13, "circuit": "Abu Dhabi"}
+  ],
+  "driver_standings": [
+    {"position": 1, "driver": "Henry", "points": 78},
+    {"position": 2, "driver": "David", "points": 77},
+    {"position": 3, "driver": "Hugorx", "points": 58},
+    {"position": 4, "driver": "Adriá", "points": 54},
+    {"position": 5, "driver": "Franconeta", "points": 40},
+    {"position": 6, "driver": "Rafa", "points": 34},
+    {"position": 7, "driver": "Jose", "points": 26},
+    {"position": 8, "driver": "Airam", "points": 22},
+    {"position": 9, "driver": "Haco", "points": 21},
+    {"position": 10, "driver": "DragonBall Adri", "points": 18},
+    {"position": 11, "driver": "Joselu", "points": 10},
+    {"position": 12, "driver": "NukeDragon", "points": 7},
+    {"position": 13, "driver": "Danielitux", "points": 4},
+    {"position": 14, "driver": "Davilito", "points": 4},
+    {"position": 15, "driver": "Aritzye", "points": 3},
+    {"position": 16, "driver": "Diegosniper", "points": 2},
+    {"position": 17, "driver": "Ferrasi", "points": 2},
+    {"position": 18, "driver": "Daniel", "points": 0},
+    {"position": 19, "driver": "Marc", "points": 0},
+    {"position": 20, "driver": "Juanma", "points": 0}
+  ],
+  "constructor_standings": [
+    {"position": 1, "team": "Henrys F1 Team", "points": 110},
+    {"position": 2, "team": "La Guagua F1 Team", "points": 96},
+    {"position": 3, "team": "Lamborghini Petarmina", "points": 79},
+    {"position": 4, "team": "Conservatory", "points": 60},
+    {"position": 5, "team": "Lotus Hrt F1", "points": 60},
+    {"position": 6, "team": "Aston Martín", "points": 38},
+    {"position": 7, "team": "Force India", "points": 17}
+  ],
+  "race_results": [
+    {
+      "round": 1,
+      "circuit": "Qatar",
+      "results": ["David", "Adriá", "Haco", "Davilito", "Airam"],
+      "dnf": ["Henry"]
+    },
+    {
+      "round": 2,
+      "circuit": "Navarra",
+      "results": [
+        "David", "Henry", "Adriá", "Franconeta", "Haco",
+        "Aritzye", "Rafa", "Danielitux", "Davilito"
+      ],
+      "dnf": ["Joselu"]
+    },
+    {
+      "round": 3,
+      "circuit": "Lagos",
+      "results": ["Henry", "Hugorx", "Franconeta", "Rafa", "Haco"],
+      "dnf": ["David"]
+    },
+    {
+      "round": 4,
+      "circuit": "Italy",
+      "results": ["Hugorx", "Airam", "Joselu", "David", "Rafa", "Adriá", "NukeDragon"]
+    },
+    {
+      "round": 5,
+      "circuit": "Jerez",
+      "results": ["Henry", "Rafa", "Jose", "Franconeta", "Aritzye", "Diegosniper", "Airam"],
+      "dnf": ["Hugorx"]
+    },
+    {
+      "round": 6,
+      "circuit": "Mexico",
+      "results": [
+        "David", "Henry", "Adriá", "DragonBall Adri", "Rafa",
+        "Franconeta", "Haco", "Joselu", "Danielitux"
+      ],
+      "dnf": ["Hugorx"]
+    },
+    {
+      "round": 7,
+      "circuit": "USA",
+      "results": ["Haco", "Rafa", "Adriá", "Danielitux", "DragonBall Adri", "NukeDragon", "Franconeta"]
+    },
+    {
+      "round": 8,
+      "circuit": "Franciacorta",
+      "results": ["Henry", "David", "Jose", "DragonBall Adri", "Rafa", "Ferrasi", "Franconeta"],
+      "dnf": ["Hugorx"]
+    },
+    {
+      "round": 9,
+      "circuit": "Canada",
+      "results": ["David", "Adriá", "Henry", "DragonBall Adri", "Rafa", "Diegosniper"],
+      "dnf": ["Franconeta"]
+    },
+    {
+      "round": 10,
+      "circuit": "USA",
+      "results": ["David", "Henry", "Adriá", "Jose", "Franconeta", "Joselu"],
+      "dnf": ["Aritzye"]
+    },
+    {
+      "round": 11,
+      "circuit": "Silverstone",
+      "results": [
+        "Hugorx", "David", "Henry", "DragonBall Adri",
+        "Franconeta", "Adriá", "Jose", "Airam", "Diegosniper"
+      ],
+      "dnf": ["Rafa", "Daniel"]
+    },
+    {
+      "round": 12,
+      "circuit": "Holanda",
+      "results": ["Hugorx", "Adriá", "Franconeta", "Jose", "Airam", "David"],
+      "dnf": ["Rafa", "Daniel"]
+    },
+    {
+      "round": 13,
+      "circuit": "Abu Dhabi",
+      "results": [
+        "Hugorx", "David", "Henry", "DragonBall Adri",
+        "Franconeta", "Adriá", "Jose", "Airam", "Diegosniper"
+      ]
+    }
+  ],
+  "champions": {
+    "drivers": "Henry",
+    "constructors": "Henrys F1 Team"
+  },
+  "additional_data": {
+    "qualifying": null,
+    "pole_positions": null,
+    "fastest_laps": null
+  }
+}
